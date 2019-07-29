@@ -64,3 +64,5 @@
     transport:
       type: sqs
       queue: '%%MAILER_QUEUE_URL%%'
+  cleanup_notify:
+    - our-team@example.com
