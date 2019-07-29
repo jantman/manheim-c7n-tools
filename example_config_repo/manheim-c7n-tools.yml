@@ -10,6 +10,12 @@
     - us-east-2
     - us-west-1
     - us-west-2
+  # Optional; list of policy/configuration directories, relative to this directory,
+  # to layer in order when building the final policies tree/configuration.
+  policy_source_paths:
+    - onePolicySet
+    - anotherPolicySet
+    - finalPolicySet
   # Name of c7n output S3 bucket
   output_s3_bucket_name: c7n-123456789012-%%AWS_REGION%%
   # Name of c7n CloudWatch Log Group
