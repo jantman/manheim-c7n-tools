@@ -35,5 +35,5 @@ Sometimes you'll want to test a PR or some code changes, such as a new c7n versi
 
 1. Make your changes in this repo as needed in a branch, commit them, push them somewhere (to origin if you have rights, or a fork otherwise).
 2. Build and test the Docker image with ``tox -e docker``
-3. Re-tag the resulting image for a private Docker registry (i.e. ``docker tag manheim/manheim-c7n-tools:GITHASH docker.artifactory.yourcompany.com/your-name/manheim-c7n-tools:test-GITHASH``) or your personal namespace on the Docker Hub (i.e. ``docker tag manheim/manheim-c7n-tools:GITHASH your-name/manheim-c7n-tools:test-GITHASH``).
+3. Re-tag the resulting image for a private Docker registry (i.e. ``docker tag manheim/manheim-c7n-tools:TAG docker.artifactory.yourcompany.com/your-name/manheim-c7n-tools:TAG``) or your personal namespace on the Docker Hub (i.e. ``docker tag manheim/manheim-c7n-tools:TAG your-name/manheim-c7n-tools:TAG``). The ``TAG`` should be a ``test_GitHash_TimStamp`` string, such as ``test_d3e0910_1603719566``.
 4. Run the image from that alternate location for testing.
