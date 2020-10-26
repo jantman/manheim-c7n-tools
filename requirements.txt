@@ -10,5 +10,5 @@ botocore==1.17.16
 docutils==0.15.2
 jmespath==0.10.0
 # Testing new code before PR
--e git+https://github.com/jantman/cloud-custodian.git@338ba8978e1d4ad8ccd218784cb1fdcf8ae3fe39#egg=c7n
--e git+https://github.com/jantman/cloud-custodian.git@338ba8978e1d4ad8ccd218784cb1fdcf8ae3fe39#egg=c7n-mailer&subdirectory=tools/c7n_mailer
+-e git+https://github.com/jantman/cloud-custodian.git@c79f56c5ddcd7163c3ddf2f1a0ec6a1cb425e32d#egg=c7n
+-e git+https://github.com/jantman/cloud-custodian.git@c79f56c5ddcd7163c3ddf2f1a0ec6a1cb425e32d#egg=c7n-mailer&subdirectory=tools/c7n_mailer
