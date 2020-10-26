@@ -25,3 +25,15 @@ Clone this repo locally on a machine with Python 3.7. Then:
 To run tests: ``tox``
 
 For information on how to run the actual commands locally, see :ref:`index`.
+
+.. _development.testing_versions:
+
+Testing PRs and New Versions
+============================
+
+Sometimes you'll want to test a PR or some code changes, such as a new c7n version or a PR against upstream c7n, without publishing a new release. There isn't a really clear official process for this, but here's what we're doing right now:
+
+1. Make your changes in this repo as needed in a branch, commit them, push them somewhere (to origin if you have rights, or a fork otherwise).
+2. Build and test the Docker image with ``tox -e docker``
+3. Re-tag the resulting image for a private Docker registry (i.e. ``docker tag manheim/manheim-c7n-tools:GITHASH docker.artifactory.yourcompany.com/your-name/manheim-c7n-tools:test-GITHASH``) or your personal namespace on the Docker Hub (i.e. ``docker tag manheim/manheim-c7n-tools:GITHASH your-name/manheim-c7n-tools:test-GITHASH``).
+4. Run the image from that alternate location for testing.
